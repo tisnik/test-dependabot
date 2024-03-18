@@ -50,7 +50,7 @@ description = "OpenShift LightSpeed is an AI powered assistant that runs on Open
 authors = []
 dependencies = [
     "torch==2.2.0+cpu",
-    "fastapi==0.109.1",
+    "fastapi==0.110.0",
     "gradio==4.19.2",
     "langchain==0.1.11",
     "llama-index==0.9.39",  # dev dep?
