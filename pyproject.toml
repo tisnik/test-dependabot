@@ -49,11 +49,11 @@ version = "0.1.0"
 description = "OpenShift LightSpeed is an AI powered assistant that runs on OpenShift and provides answers to product questions using backend LLM services."
 authors = []
 dependencies = [
-    "torch==2.2.2",
+    "torch==2.2.0+cpu",
     "fastapi==0.110.0",
     "gradio==4.24.0",
     "langchain==0.1.14",
-    "llama-index==0.10.26",  # dev dep?
+    "llama-index==0.9.39",  # dev dep?
     "uvicorn==0.29.0",
     "redis==5.0.3",
     "faiss-cpu==1.8.0",
