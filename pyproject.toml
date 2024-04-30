@@ -1,7 +1,7 @@
 [tool.ruff]
 
 # description of all rules are available on https://docs.astral.sh/ruff/rules/
-lint.select = ["D", "E", "F", "W", "C", "S", "I", "TCH", "SLOT", "RUF", "C90", "N"]
+lint.select = ["D", "E", "F", "W", "C", "S", "I", "TCH", "SLOT", "RUF", "C90", "N", "YTT", "ASYNC", "TRIO"]
 
 # we need to check 'mood' of all docstrings, this needs to be enabled explicitly
 lint.extend-select = ["D401"]
@@ -11,7 +11,6 @@ lint.ignore = []
 target-version = "py311"
 lint.pydocstyle.convention = "google"
 line-length = 100
-lint.flake8-pytest-style.fixture-parentheses = false
 
 [tool.coverage.report]
 # unit tests fails if the total coverage measurement is under this threshold value
@@ -53,8 +52,10 @@ dependencies = [
     "langchain==0.1.16",
     "langchain-ibm==0.1.4",
     "llama-index==0.10.31",
+    "llama-index-vector-stores-faiss==0.1.2",
+    "llama-index-embeddings-huggingface==0.2.0",
     "uvicorn==0.29.0",
-    "redis==5.0.3",
+    "redis==5.0.4",
     "faiss-cpu==1.8.0",
     "sentence-transformers==2.7.0",
     "openai==1.23.6",
@@ -78,3 +79,4 @@ test = "pdm run make test"
 test-unit = "pdm run make test-unit"
 test-integration = "pdm run make test-integration"
 test-e2e = "pdm run make test-e2e"
+coverage-report = "pdm run make coverage-report"
