@@ -35,7 +35,7 @@ distribution = false
 
 [tool.pdm.dev-dependencies]
 dev = [
-    "black==24.4.2",
+    "black==24.8.0",
     "fastparquet==2024.5.0",  # Required for model evaluation (runtime, if parquet qna file is used)
     "httpx==0.27.0",
     "mypy==1.11.1",
@@ -44,13 +44,14 @@ dev = [
     "pytest-asyncio==0.23.7",
     "pydantic==2.8.2",
     "rouge-score==0.1.2",  # Required for model evaluation
-    "ruff==0.5.5",
+    "ruff==0.5.6",
     "bandit==1.7.9",
     "types-requests==2.32.0.20240622",
     "gradio==4.37.2",
     "boto3==1.34.145",
     "reportportal-client==5.5.6",
     "pytest-reportportal==5.4.1",
+    "pytest-benchmark==4.0.0",
 ]
 
 [[tool.pdm.source]]
@@ -116,6 +117,7 @@ integration-tests-coverage-report = "pdm run make integration-tests-coverage-rep
 check-types = "pdm run make check-types"
 generate-schema = "pdm run make schema"
 security-check = "pdm run make security-check"
+benchmarks = "pdm run make benchmarks"
 
 [tool.setuptools]
 packages = ["ols"]
